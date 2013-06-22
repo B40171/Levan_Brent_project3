@@ -1,6 +1,4 @@
-var fishLocations = ["Bradenton Creek",
-                     "Skyway",
-                     "Rainbow River"];
+
 var hooked = {
     'genus' : 'fish',
     'species' : 'Tilapia',
@@ -9,21 +7,24 @@ var hooked = {
     'awefulToEat' : false
 };
 
-
-//array
-console.log( "We have three locations to choose from,");
-
-var fishLocations = ['Bradenton Creek, ',
+var fishLocations = ['Bradenton Creek, ', //array
                      'Skyway, ',
                      'Rainbow River. '];
 
-for (var i=0; i<3; i++) {
-  console.log(fishLocations[i]);
+console.log( "We have three locations to choose from,");
 
-    
+function locations(fishLocations) {
+ 
+    for (var locations=0; locations<3; locations++) {
+    console.log(fishLocations[locations]);
+
+    return(fishLocations)
+    }
 };
 
-var hooked = {
+function whereTo(fishLocations,hooked) { //boolean argument
+    
+    hooked = {
     'genus' : 'fish',
     'species' : 'Tilapia',
     'description' : 'red belly',
@@ -31,19 +32,19 @@ var hooked = {
     'awefulToEat' : false
 };
 
- var fishLocations = ["Bradenton Creek",
+    
+    fishLocations = ["Bradenton Creek",
                      "Skyway",
                      "Rainbow River"];
- 
-var whereTo = function (fishLocations) {
+    
     if (hooked.awefulToEat === false) {
         console.log("We will go to " + fishLocations[0]);
-        
+         
     } else {
         console.log("We will go to " + fishLocations[2])
-    
+     
     }
-};
-
-whereTo(hooked.awefulToEat =true );
-  
+       return(fishLocations)
+};    
+              
+whereTo(hooked);
