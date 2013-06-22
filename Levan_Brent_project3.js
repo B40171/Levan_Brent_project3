@@ -1,3 +1,7 @@
+var sport = "bow fishing"
+var fisherman = ["jeff",
+                "myself"];
+
 
 var hooked = {
     'genus' : 'fish',
@@ -7,19 +11,17 @@ var hooked = {
     'awefulToEat' : false
 };
 
+console.log(fisherman[0] + " and " + fisherman[1] + " are going " + sport + " today.");
+
 var fishLocations = ['Bradenton Creek, ', //array
                      'Skyway, ',
                      'Rainbow River. '];
 
 console.log( "We have three locations to choose from,");
 
-function locations(fishLocations) {
- 
-    for (var locations=0; locations<3; locations++) {
-    console.log(fishLocations[locations]);
+for (var i=0; i<3; i++) {
+  console.log(fishLocations[i]);
 
-    return(fishLocations)
-    }
 };
 
 function whereTo(fishLocations,hooked) { //boolean argument
@@ -38,13 +40,15 @@ function whereTo(fishLocations,hooked) { //boolean argument
                      "Rainbow River"];
     
     if (hooked.awefulToEat === false) {
-        console.log("We will go to " + fishLocations[0]);
+        console.log("We will go to " + fishLocations[0] + ".");
          
     } else {
-        console.log("We will go to " + fishLocations[2])
+        console.log("We will go to " + fishLocations[2] + ".");
      
     }
-       return(fishLocations)
+       return(fishLocations);
 };    
               
 whereTo(hooked);
+
+
